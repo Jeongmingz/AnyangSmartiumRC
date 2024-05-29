@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CodeBlock">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10sp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/codeList"
+            android:layout_width="match_parent"
+            android:layout_height="245sp"
+            android:background="@drawable/btn_background"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            android:elevation="10sp"
+            />
+
+        <LinearLayout
+            android:id="@+id/buttonlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/codeList"
+            tools:ignore="UnknownIdInLayout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/startBtn"
+                    android:layout_width="60sp"
+                    android:layout_height="60sp"
+                    android:background="@drawable/ic_baseline_play_circle_24"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toTopOf="@+id/back"
+                    app:layout_constraintLeft_toRightOf="@+id/left"
+                    app:layout_constraintRight_toLeftOf="@+id/right"
+                    app:layout_constraintTop_toBottomOf="@+id/front"
+                    tools:ignore="NotSibling" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/front"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_background"
+                    android:drawableBottom="@drawable/ic_top"
+                    android:paddingBottom="15sp"
+                    android:layout_marginTop="100sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80sp"
+                    android:background="@drawable/btn_background"
+                    android:drawableTop="@drawable/ic_bottom"
+                    android:paddingTop="15sp"
+
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/front" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="65dp"
+                    android:background="@drawable/btn_background"
+                    android:drawableRight="@drawable/ic_left"
+                    android:paddingRight="30sp"
+                    android:layout_marginTop="10sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/startBtn"
+                    app:layout_constraintTop_toBottomOf="@+id/front" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="65dp"
+                    android:background="@drawable/btn_background"
+                    android:drawableLeft="@drawable/ic_right"
+                    android:paddingLeft="30sp"
+                    android:layout_marginTop="10sp"
+                    app:layout_constraintLeft_toRightOf="@+id/startBtn"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/front" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

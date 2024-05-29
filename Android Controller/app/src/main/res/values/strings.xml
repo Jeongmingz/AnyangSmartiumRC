@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Daelim RC</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="carList">
+        <item>"1호차"</item>
+        <item>"2호차"</item>
+        <item>"3호차"</item>
+    </string-array>
+</resources>
